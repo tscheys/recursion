@@ -14,6 +14,20 @@ var stringifyJSON = function(obj) {
 		JSON = "\"" + obj + "\"";
 
 	}
+	if(obj === undefined) {
+		return "";
+	}
+	if(Array.isArray(obj)) {
+		JSON = "[";
+		var s = ""; 
+		_.each(obj, function (value, index, collection) {
+			if(index > 0) {s += ",";}
+			s += stringifyJSON(value);
+			
+		});
+		JSON += s + "]";
+	}
+
 	return JSON;
 
   // your code goes here
