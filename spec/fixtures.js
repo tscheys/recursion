@@ -6,7 +6,7 @@ var stringifiableObjects = [
   null,
   true,
   false,
-  "Hello world",
+  "Hello World",
   [],
   [8],
   ["hi"],

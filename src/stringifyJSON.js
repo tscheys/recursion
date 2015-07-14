@@ -4,16 +4,17 @@
 // but you don't so you're going to write it from scratch:
 
 var stringifyJSON = function(obj) {
+	var JSON = "";
 
 	if(typeof obj === "boolean" || "number") {
-		var JSON = '' + obj;
-		return JSON;
-	}
-	else if(typeof obj === "string") {
+		JSON =  '' + obj;
 
-		var JSON = obj + '';
-		return JSON;
 	}
+	if(typeof obj === "string") {
+		JSON = "\"" + obj + "\"";
+
+	}
+	return JSON;
 
   // your code goes here
 };
